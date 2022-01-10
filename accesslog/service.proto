@@ -1,0 +1,10 @@
+syntax="proto3";
+
+package accesslog;
+
+import "accesslog/message.proto";
+
+service AccessLogService{
+    rpc Create(AccessLogCreateRequest) returns(AccessLogCreateResponse);  
+    rpc List(AccessLogListRequest) returns(AccessLogListResponse);   
+}
